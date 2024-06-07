@@ -60,35 +60,28 @@ public class AddressBookApplication {
                                                 "¿Deseas guardar esta entrada en un archivo de texto? s/n");
                             char confirmation = scanner.next().charAt(0);
                             scanner.nextLine();
-
-                            switch(confirmation){
-                                case'y':
+                            
+                            if(confirmation=='y'  ||  confirmation=='s'){
                                 addressEntries.saveToFile(tempEntry);
                                 System.out.println("This entry has been saved to .txt file."+
                                                    "\nEsta entrada ha sido guardada en un archivo .txt");
                                 savingBucle = false;
-                                break;
-
-                                case's':
-                                addressEntries.saveToFile(tempEntry);
-                                System.out.println("This entry has been saved to .txt file."+
-                                                   "\nEsta entrada ha sido guardada en un archivo .txt");
-                                savingBucle = false;
-                                break;
-
-                                case'n':
+                            }
+                    
+                            else if(confirmation=='n'){
                                 addressEntries.saveToFile(tempEntry);
                                 System.out.println("This entry has not been saved, it will lose when the program ends."+
                                                    "\nEsta entrada no ha sido guardada, se perderá cuando el programa termine.");
                                 savingBucle = false;
-                                break;
-                            
-                                default:
-                                System.out.println("Please choose one of the valid options.\nPor favor elige una de las opciones validas.");
-                                break;
+                        
+                            }
+                    
+                            else{
+                                System.out.println("Please choose one of the valid options.\nPor favor elige una de las opciones validas");
                             }
                         } while (savingBucle); 
-                    } else {
+                    } 
+                    else {
                         System.out.println("That contact has already been added.\nEse contacto ya fue añadido.");
                     }
                     break;
@@ -122,29 +115,17 @@ public class AddressBookApplication {
                     if(response=='y'  ||  response=='s'){
                         addressEntries.erase(searchLastName);
                     }
+                    //Caso de no eliminar
                     else if(response=='n'){
-
-                    }
-                    switch(response){
-                        case'y':
-                        
-                        break;
-
-                        case's':
-                        addressEntries.erase(searchLastName);
-                        break;
-
-                        case'n':
                         System.out.println("This entry remains in your contacts.\n Esta entrada permanece en tus contactos");
-                        break;
-                    
-                        default:
-                        System.out.println("Please choose one of the valid options.\nPor favor elige una de las opciones validas");
-                        break;
+                        
                     }
-                    break;
+                    //Entrada erronea
+                    else{
+                        System.out.println("Please choose one of the valid options.\nPor favor elige una de las opciones validas");
+                    }
 
-                
+
                 case "e":
                     addressEntries.show();
                     break;
