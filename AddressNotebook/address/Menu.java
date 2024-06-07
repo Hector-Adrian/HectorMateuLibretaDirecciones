@@ -23,7 +23,7 @@ public class Menu {
      */
     public void displayMenu() {
         System.out.println("◺_______________________________◿");
-        System.out.println("Choose an option from the menu");
+        System.out.println("Choose an option from the menu\nElije una opción del menú");
         System.out.println("a) Add / Añadir");
         System.out.println("b) Load from file / Cargar de archivo");
         System.out.println("c) Find / Encontrar");
