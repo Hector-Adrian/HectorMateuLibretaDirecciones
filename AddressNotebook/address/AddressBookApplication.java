@@ -88,7 +88,7 @@ public class AddressBookApplication {
 
                 //Caso de cargar registro desde archivo   
                 case "b":
-                    System.out.println("Enter the file name");
+                    System.out.println("Enter the file name\nIngresa el nombre del archivo:");
                     String fileName = scanner.nextLine();
                     addressEntries.readFromFile(fileName);
                     break;
