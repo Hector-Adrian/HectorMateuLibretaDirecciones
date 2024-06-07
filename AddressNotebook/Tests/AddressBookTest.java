@@ -48,7 +48,7 @@ public class AddressBookTest {
 
     @Test
     void testReadFromFile() {
-        addressBook.readFromFile("Hector_Mateu.txt");
+        addressBook.readFromFile("Prueba.txt");
         assertEquals(1, addressBook.getEntries().size());
     }
 
