@@ -157,7 +157,7 @@ public class AddressBook {
      */
     public void show() {
         if (addressEntries.isEmpty()) {
-            System.out.println("The Address Book is empty.La libreta de direcciones esta vacía");
+            System.out.println("The Address Book is empty.\nLa libreta de direcciones esta vacía");
         } else {
             Comparator<AddressEntry> lastNameComparing = Comparator.comparing(AddressEntry::getLastName);
             addressEntries.sort(lastNameComparing);
